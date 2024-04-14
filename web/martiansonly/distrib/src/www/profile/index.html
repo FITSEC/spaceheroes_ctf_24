@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<z content="./scripts/gen_head.sh 'martiansonly dot net - create/edit profile'"></z>
+	<body>
+		<z content="./scripts/gen_header.sh"></z>
+		<main>
+			<h1>Create/edit profile</h1>
+			<small>(low budget edition)</small>
+			<form method="post" action="/<z content="./scripts/get_key.sh"></z>/profile" enctype="multipart/form-data">
+				<p>
+					<input type="text" name="name" id="name" placeholder="Enter your name" autofocus required><br>
+					
+					<textarea name="bio" id="bio" rows="4" cols="30" maxlength="500" placeholder="Introduce yourself" required></textarea><br>
+					
+					<label for="pic" >Upload profile picture</label>
+					<input type="file" name="pic" id="pic" accept="image/jpeg" required><br>
+					<br>
+					<input type="submit" value="Submit profile">
+				</p>
+			</form>
+		</main>
+		<z content="./scripts/gen_footer.sh"></z>
+	</body>
+</html>

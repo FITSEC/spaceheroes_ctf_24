@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Astronomical Calculator</title>
+    <link rel="stylesheet" href="../static/styles.css"> 
+</head>
+<body style="background-color: #d2b48c;">
+    <h1>Greek Astronomical Calculator</h1>
+        <div id="result">
+        <h1>{{result}}</h1>
+        </div>
+    
+    <div class="outer-circle">
+
+  <div class="metric-container">
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const totalLines = 180;
+
+        const container = document.querySelector('.metric-container');
+
+        for (let i = 1; i <= totalLines; i++) {
+
+            const minorLine = document.createElement('div');
+
+            minorLine.className = `metric-line minor-line line-${i}`;
+
+            const rotationAngle = i;
+
+            minorLine.style.transform = `rotate(${rotationAngle}deg)`;
+
+            const leftPosition = container.clientWidth / 2 - 440; // Adjust as needed
+            minorLine.style.left = `${leftPosition}px`;
+
+            container.appendChild(minorLine);
+        }
+    });
+    
+</script>
+
+    </div>
+</div>  
+  
+    <div class="outer-circle-2">
+   <div class="metric-lines"></div>
+</div>
+   
+    <div class="inner-circle-1" id="planet-1"></div>
+    <div class="inner-circle-2" id="planet-2"></div>
+    <div class="inner-circle-3" id="planet-3"></div>
+    <div class="inner-circle-4" id="planet-4"></div>
+    <div class="inner-circle-5" id="planet-5"></div>
+    <div class="center-circle">
+        
+        <div id="second-hand-1">
+          <div class="circle-image-1"> </div> 
+        </div>
+        
+        <div id="second-hand-2">
+          <div class="circle-image-2"> </div> 
+        </div>
+        <div id="second-hand-3">
+        <div class="circle-image-3"> </div>
+        </div>
+        
+        <div id="second-hand-4">
+        <div class="circle-image-4"> </div>
+        </div>
+        <div id="second-hand-5">
+        <div class="circle-image-5"> </div>
+        </div>
+        <div id="second-hand-6">
+        <div class="circle-image-6"> </div>
+        </div>
+    </div>
+
+<div id="mydiv">
+    <form id="myForm">
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date"/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+   <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+            
+        const formData = new FormData(this);
+        const dateValue = formData.get('date');
+            
+        fetch('/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); 
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+            
+            document.getElementById('result').innerHTML = data;
+            console.log("Function called");
+            const seconds = document.getElementById('date').value;
+            const rotationDegrees = (Math.random())  * 360;
+            const rotationDegrees2 = (Math.random()) * 2 * 360;
+            const rotationDegrees3 = (Math.random())* 3 * 360;
+            const rotationDegrees4 = (Math.random())* 4 * 360;
+            const rotationDegrees5 = (Math.random())* 5 * 360;
+            const rotationDegrees6 = (Math.random())* 6 * 360;
+            
+            document.getElementById('second-hand-1').style.transform = `rotate(${rotationDegrees}deg)`;
+            document.getElementById('second-hand-2').style.transform = `rotate(${rotationDegrees2}deg)`;
+            document.getElementById('second-hand-3').style.transform = `rotate(${rotationDegrees3}deg)`;
+            document.getElementById('second-hand-4').style.transform = `rotate(${rotationDegrees4}deg)`;
+            document.getElementById('second-hand-5').style.transform = `rotate(${rotationDegrees5}deg)`;
+            document.getElementById('second-hand-6').style.transform = `rotate(${rotationDegrees6}deg)`;
+            
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+        });
+    });
+    </script>
+    
+</body>
+</html>
+

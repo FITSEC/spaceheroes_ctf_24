@@ -1,0 +1,10 @@
+@for $i from 1 through 180 {
+  // Check if the current number matches the pattern
+
+    .minor-line.line-#{$i} {
+      transform: rotate(#{$i}deg);
+      top: calc(50%);
+      left: calc(50% - 440px);
+  }
+}
+

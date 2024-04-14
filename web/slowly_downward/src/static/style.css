@@ -1,0 +1,80 @@
+* {
+    font-family: 'Sequel Sans', sans-serif;
+}
+
+h1, h2 {
+    color: #0069b3;
+}
+
+.container {
+    width: 100%;
+    max-width: 50%; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    color: #0069b3; /* Added color property for consistency */
+}
+
+.container .homeDesc {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.red-text {
+    color: red;
+}
+
+/* NAV */
+nav ul {
+    width: 50%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid; /* Use grid layout for the navigation links */
+    grid-template-columns: repeat(2, 1fr); /* 4 columns with equal width */
+    grid-gap: 0px; /* Gap between grid items */
+}
+
+nav li {
+    margin-bottom: 0px;
+}
+
+nav a {
+    display: block;
+    padding: 0px;
+    background-color: #0069b3;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.thoughts ul {
+    width: 40%;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+    display: grid; /* Use grid layout for the navigation links */
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px; /* Gap between grid items */
+}
+
+.thoughts ul li a {
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.goBack {
+    padding: 0px 10px;
+    text-align: left;
+    background-color: #324395;
+}
+
+.goBackNow {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden-link {
+    display: none;
+}
+/* NAV */

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+exec 2>/dev/null
+
+dir=/tmp/$(tr -dc A-Za-z0-9 < /dev/urandom | head -c 20)
+
+mkdir $dir
+cd $dir
+cp /scotty /spock $dir
+
+timeout -k 300 240 ./scotty shctf{4dm1ral_th3re_be_wh4les_her3} &
+sleep 0.1
+timeout --foreground -k 300 240 stdbuf -i0 -o0 -e0 ./spock
+
+cd
+rm -rf $dir
+exit

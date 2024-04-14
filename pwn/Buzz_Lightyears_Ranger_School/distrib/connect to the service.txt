@@ -1,0 +1,3 @@
+from pwn import * 
+p=remote("spaceheroes-pwnschool.chals.io", 443, ssl=True, sni="spaceheroes-pwnschool.chals.io")
+p.interactive()

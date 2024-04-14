@@ -1,0 +1,9 @@
+'1. The 'x' array is an array of constant float values
+2. The program takes input from the user, in the form of 12 float values and stores the input in the 'y' array
+3. The program goes to the 'calculate' function, which takes the values of 'x', multiplies them by 2, then adds the current time in minutes modulo 12.
+3a. In mathematical terms, this is (x[i] * 2) + (current_minutes % 12)
+3b. Example: if the calulate function is called at 7:25, the first value would be (1.2 * 2) + (25 % 12) = 3.4
+4. The values of the 'x' array are compared to user input array 'y' in the 'check' function. If both arrays are equal, win() is called. Lose() is called otherwise.
+5. Win splash screen is displayed, print_flag() is called.
+
+

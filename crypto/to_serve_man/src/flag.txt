@@ -1,0 +1,45 @@
+Ingredients:
+
+- 3 cloves of garlic, minced
+- 1 tablespoon of fresh rosemary, chopped
+- 1 teaspoon of thyme
+- 2 tablespoons of olive oil
+- ½ teaspoon of lemon zest
+- 1 cup of red wine (for marination)
+- 4 potatoes, peeled and quartered
+- 3 carrots, roughly chunked
+- 1 onion, sliced
+- 2 cups of human blood (for basting)
+- 2 pounds of human meat, carefully sourced
+- 1 flag: shctf{fR0m_du57_tO_d3s5eRt}
+- Salt and pepper to taste
+
+Instructions:
+
+- Prepare the Marinade:
+  - In a large bowl, combine minced garlic, chopped rosemary, thyme, salt, pepper, lemon zest, and olive oil.
+  - Add the human meat to the marinade, ensuring it is well-coated.
+  - Pour in the red wine, cover the bowl, and refrigerate for at least 4 hours or overnight for the flavors to meld.
+
+- Preheat the Oven:
+  - Preheat the oven to 375°F (190°C).
+
+- Prepare the Roast:
+  - Remove the marinated human meat from the refrigerator and let it come to room temperature.
+  - Place the meat in a roasting pan, surrounded by potatoes, carrots, and onions.
+
+- Basting:
+  - Use a baster to generously coat the human meat with the reserved marinade and human blood. This will keep the meat moist and infuse it with a rich, savory flavor.
+
+- Roasting:
+  - Roast in the preheated oven for approximately 25 minutes per pound, or until the internal temperature reaches 145°F (63°C) for medium-rare.
+
+- Resting:
+  - Allow the roast to rest for 15 minutes before carving to ensure the juices redistribute and the meat remains tender.
+
+- Serve:
+  - Carve the human roast into slices and arrange them on a platter.
+  - Garnish with fresh herbs and serve with a side of roasted vegetables.
+
+- Submit the flag:
+  - Profit?

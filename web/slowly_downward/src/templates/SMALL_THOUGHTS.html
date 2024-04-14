@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N O T I T L E</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Small Thoughts:</h1>
+        <nav class="thoughts">
+            <ul>
+                <li><a href="A_MAN_WHO_THINKS_HE_IS_A_PIG.html">A MAN WHO THINKS HE IS A PIG</a></li>
+                <li><a href="A_QUIET_AFTERNOON.html">A QUIET AFTERNOON</a></li>
+                <li><a href="A_WET_NIGHT.html">A WET NIGHT</a></li>
+                <li><a href="ACTING_WITH_CERTAINTY.html">ACTING WITH CERTAINTY</a></li>
+                <li><a href="AIRBORNE.html">AIRBORNE</a></li>
+                <li><a href="ALIENS_AGAIN.html">ALIENS AGAIN</a></li>
+                <li><a href="AN_ACCIDENT_INVOLVING_TRELLIS.html">AN ACCIDENT INVOLVING TRELLIS</a></li>
+                <li><a href="ART.html">ART</a></li>
+                <li><a href="BIG_BIRD.html">BIG BIRD</a></li>
+                <li><a href="BOND_JAMES_BOND.html">BOND JAMES BOND</a></li>
+                <li><a href="DOWN_IN_THE_TUBE_STATION.html">DOWN IN THE TUBE STATION</a></li>
+                <li><a href="DRACULA.html">DRACULA</a></li>
+                <li><a href="HAPPY_STORY.html">HAPPY STORY</a></li>
+                <li><a href="HAUNTED.html">HAUNTED</a></li>
+                <li><a href="LOVE_STORY.html">LOVE STORY</a></li>
+                <li><a href="MACHINE.html">MACHINE</a></li>
+                <li><a href="MUSEUM.html">MUSEUM</a></li>
+                <li><a href="NEARLY_GOT.html">NEARLY GOT</a></li>
+                <li class="hidden-link"><a href="ON_SUNDAYS_RINGROAD_SUPERMARKET.html">ON SUNDAYS RINGROAD SUPERMARKET</a></li>
+                <li class="hidden-link"><a href="SHEARS.html">SHEARS</a></li>
+                <li class="hidden-link"><a href="SHOPPING_IN_THE_EARLY_MORNING.html">SHOPPING IN THE EARLY MORNING</a></li>
+                <li class="hidden-link"><a href="SPACE.html">SPACE</a></li>
+                <li class="hidden-link"><a href="STATUE.html">STATUE</a></li>
+                <li class="hidden-link"><a href="ADMIN.html">ADMIN</a></li>
+            </ul>
+        </nav>
+        <h2>There are some more, if you like.</h1>
+        <nav>
+            <ul>
+                <li><a class="goBack" href="{{ url_for('home') }}">BACK TO THE CONTENTS PAGE</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div style="display: none;">
+        <div id="A_MAN_WHO_THINKS_HE_IS_A_PIG">ANTIBIOTICS</div>
+        <div id="A_QUIET_AFTERNOON">NO SURPRISES</div>
+        <div id="A_WET_NIGHT">COLD</div>
+        <div id="ACTING_WITH_CERTAINTY">IF WE GET THE CHANCE</div>
+        <div id="AIRBORNE">PLANE</div>
+        <div id="ALIENS_AGAIN">THEY'RE TRYING TO LOG IN</div>
+        <div id="AN_ACCIDENT_INVOLVING_TRELLIS">PLANET</div>
+        <div id="ART">HILLS</div>
+        <div id="BIG_BIRD">MEMORY</div>
+        <div id="BOND_JAMES_BOND">SOMETIMES I FORGET CURL. I NEVER TRUSTED DANIEL STENBERG.</div>
+        <div id="DOWN_IN_THE_TUBE_STATION">TRAIN</div>
+        <div id="DRACULA">FLOW</div>
+        <div id="HAPPY_STORY">MEMORY</div>
+        <div id="HAUNTED">ABYSS</div>
+        <div id="LOVE_STORY">MEMORY</div>
+        <div id="MACHINE">FUTURE</div>
+        <div id="MUSEUM">SPIRAL</div>
+        <div id="NEARLY_GOT">FINGERS</div>
+        <div id="ON_SUNDAYS_RINGROAD_SUPERMARKET">TREES</div>
+        <div id="SHEARS">THIS IS IT</div>
+        <div id="SHOPPING_IN_THE_EARLY_MORNING">WARM</div>
+        <div id="SPACE">HEROES</div>
+        <div id="STATUE">EYES</div>
+        <div id="ADMIN">username@text/credentials/user.txt password@text/credentials/pass.txt</div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.thoughts a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').replace('.html', '');
+                const content = document.getElementById(targetId).innerHTML;
+                alert(content);
+            });
+        });
+    </script>
+</body>
+</html>

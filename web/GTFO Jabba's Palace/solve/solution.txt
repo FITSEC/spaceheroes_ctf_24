@@ -1,0 +1,7 @@
+1. Look at cookie generated after failed submission to find password
+2. Password is 'myfavoritedecoration'
+3. Get to ping, enter anything to get to fail screen
+4. Look at page source, see URL https://gtfobins.github.io/gtfobins/jq/#file-read
+5. Submit ping to any website with a semi-colon followed by that exploit
+6. Command will look like this: https://www.google.com/; jq -Rr . "flag.txt"
+7. Flag is shctf{h4ck_m3_s0l0_4nd_th3_w00ki3}

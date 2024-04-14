@@ -1,0 +1,295 @@
+@import 'outest.css';
+.outer-circle {
+    width: 920px;
+    height: 920px;
+    border: 2px solid #000000;
+    border-radius: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -2;
+    
+}
+
+.outer-circle-2 {
+    width: 800px;
+    height: 800px;
+    border: 2px solid #000000;
+    border-radius: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #d2b48c;
+    
+}
+
+
+.metric-line {
+    position: absolute;
+    width: 95%;
+    background-color: #000000; 
+}
+
+/* Major metric lines */
+.major-line {
+    height: 3px; /* Adjust thickness as needed */
+}
+
+/* Minor metric lines */
+.minor-line {
+    height: 2px;
+    z-index: -1;
+}
+
+/* Styles for the inner circles (planets) */
+.inner-circle-1 {
+    width: 680px;
+    height: 680px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #d2b48c;
+}
+
+.inner-circle-2 {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.inner-circle-3 {
+    width: 520px;
+    height: 520px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.inner-circle-4 {
+    width: 440px;
+    height: 440px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.inner-circle-5 {
+    width: 360px;
+    height: 360px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+
+/* Style for the center circle */
+.center-circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url('images/sun.jpg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+     z-index: 6;
+}
+
+
+#second-hand-1{
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    bottom:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: red;
+    transform-origin: bottom center;
+    z-index: 7;
+    transition: transform 3s ease-in-out;
+}
+
+.circle-image-1 {
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    width: 40px; 
+    height: 40px; 
+    background-image: url('images/mercury.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 50%; 
+    transform: translateX(-50%); 
+    z-index: 7; 
+}
+
+#second-hand-2{
+    position: absolute;
+    width: 10px;
+    height: 240px;
+    bottom:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: red;
+    transform-origin: bottom center;
+    z-index: 7;
+    transition: transform 3s ease-in-out;
+}
+
+.circle-image-2 {
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    width: 40px; 
+    height: 40px; 
+    background-image: url('images/venus.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 50%; 
+    transform: translateX(-50%); 
+    z-index: 7; 
+}
+
+#second-hand-3{
+    position: absolute;
+    width: 10px;
+    height: 280px;
+    bottom:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: red;
+    transform-origin: bottom center;
+    z-index: 7;
+    transition: transform 3s ease-in-out;
+}
+
+.circle-image-3 {
+    position: absolute;
+    top: -18px; 
+    left: 50%; 
+    width: 40px; 
+    height: 40px; 
+    background-image: url('images/earth.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 50%; 
+    transform: translateX(-50%); 
+    z-index: 7; 
+}
+
+#second-hand-4 {
+    position: absolute;
+    width: 10px;
+    height: 325px;
+    bottom:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: red;
+    transform-origin: bottom center;
+    z-index: 7;
+    transition: transform 3s ease-in-out;
+}
+
+.circle-image-4 {
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    width: 40px; 
+    height: 50px; 
+    background-image: url('images/mars.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 50%; 
+    transform: translateX(-50%); 
+    z-index: 7; 
+}
+
+#second-hand-5{
+    position: absolute;
+    width: 10px;
+    height: 370px;
+    bottom:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: red;
+    transform-origin: bottom center;
+    z-index: 7;
+    transition: transform 3s ease-in-out;
+}
+
+.circle-image-5 {
+    position: absolute;
+    top: -32px; 
+    left: 50%; 
+    width: 60px; 
+    height: 60px; 
+    background-image: url('images/jupiter.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 50%; 
+    transform: translateX(-50%); 
+    z-index: 7; 
+}
+
+#second-hand-6 {
+    position: absolute;
+    width: 10px;
+    height: 450px;
+    bottom:50%;
+    left:50%;
+    border-radius: 50%;
+    background-color: red;
+    transform-origin: bottom center;
+    z-index: 7;
+    transition: transform 3s ease-in-out;
+}
+
+.circle-image-6 {
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    width: 80px; 
+    height: 80px; 
+    background-image: url('images/saturn.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 50%; 
+    transform: translateX(-50%); 
+    z-index: 7; 
+}

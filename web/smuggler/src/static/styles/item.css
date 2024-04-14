@@ -1,0 +1,29 @@
+/* item.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex; /* Use flexbox */
+}
+
+.content img {
+    max-width: 500px; /* Ensure image doesn't exceed container width */
+    max-height: 60%; /* Ensure image doesn't exceed container height */
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.content p {
+    max-height: 100%;
+    max-width: 100%;
+    flex: 1; /* Let text fill remaining space */
+    font-family:'Trebuchet MS', monospace;
+}

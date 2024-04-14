@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N O T I T L E</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='pics/nope.jpg') }}" alt="head Image">
+        <h1>I ATTEMPT TO UNDERSTAND MY DREAMS</h1>
+        <p class="homeDesc">
+            This section has not gotten to the forefront of my attention yet, perhaps you should look elsewhere for the time being. Get out.
+        </p>
+        <nav>
+            <ul>
+                <li><a class="goBack" href="{{ url_for('home') }}">BACK TO THE CONTENTS PAGE</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

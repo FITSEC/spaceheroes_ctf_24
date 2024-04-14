@@ -1,0 +1,33 @@
+from numpy import full
+from pwn import *
+rsp = 0x700000
+
+def start():
+    if args.REMOTE:
+        return remote("spaceheroes-lethal-virtualization.chals.io", 443, ssl=True, sni="spaceheroes-lethal-virtualization.chals.io")
+    else:
+        return process("./Borson300VM.bin ./bytes.txt", shell=True)
+
+# With enc
+# popcnt_test = b"\xc2\xcf\x01\x6b\x06\x0d\x0a\xc0\x01\xac\xb6\xc0\x01"
+
+# stack_flag_test = b"\xc2\xcf\x01\x6b\x06\x0d\x0a\xc0\x01\xc2\xcf\x01\xdf\x0c\x0c\x5a\xc0\x01\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x02\xc0\x06\xc0\x06\xc7\xff\xc0\x06\xd8\xff"
+
+# scanf_test = b"\xc0\x01\xc0\x06\xd6\xff\xc0\x01" # 1684300900
+
+# Without enc
+# This solve is hand written. Please use the Assembler to make new bytecode.
+full_solve = b"\xc0\x06\xc2\x65\xc0\x05\xc2\xcf\x01\x00\x00\x01\x0f\xc0\x01\xac\xb2\xc2\x51\xc2\xcf\x01galf\xc0\x01\xc2\xcf\x01txt.\xc0\x01\xc0\x02\xc0\x06\xc2\xcf\x01\x00\x6f\xfe\xf0\xc0\x01\xc2\xcf\x01\x00\x00\x00\x50\xc0\x01\xc7\xff\xc0\x06\xd8\xff\xc2\xf0\xc0\x01"
+
+with open("bytes.txt", "wb") as f:
+    f.write(full_solve)
+p = start()
+if args.REMOTE:
+    p.send(full_solve)
+
+out = p.recvall()#.decode("utf-8", errors="ignore")
+sys.stdout.buffer.write(out)
+
+with open("testRun.txt", "wb") as f:
+    f.write(out)
+

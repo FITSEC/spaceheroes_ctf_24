@@ -1,0 +1,1 @@
+shctf{SSTI_1s_m0r3_fun_!_Wh3n_1t_b3c0m3s_RC3!}
